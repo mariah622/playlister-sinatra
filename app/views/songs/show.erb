@@ -1,0 +1,9 @@
+<%# rspec spec/features/04_basic_view_spec.rb %>
+
+
+Name: <%=@song.name%><br>
+Artist Name: <a href="/artists/<%=@song.artist.slug%>"><%=@song.artist.name%></a><br>
+<%@song.genres.each do |genre|%>
+    Genre: <a href="/genres/<%=genre.slug%>"><%=genre.name.capitalize%></a>
+<%end%>
+
